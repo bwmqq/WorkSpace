@@ -14,6 +14,12 @@ public class BasePage {
         WebElement element = driver.findElement(by);
         return element;
     }
+    //层级定位, 通过父节点定位子节点
+    //需要传入父节点和子节点的By
+    public WebElement nodeElement(By by, By nodeBy){
+        WebElement element = this.element(by);
+        return element.findElement(nodeBy);
+    }
     //封装点击
     public void click(WebElement element){
         if (element != null){

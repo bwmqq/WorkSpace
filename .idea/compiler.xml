@@ -6,8 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="BDSelenium" />
         <module name="MKSelenium" />
+        <module name="XCSelenium" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="MKS" target="1.7" />
+      <module name="MKXDtest" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

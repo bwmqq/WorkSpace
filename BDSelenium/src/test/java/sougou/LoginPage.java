@@ -1,42 +1,42 @@
 package sougou;
 
 import com.fxy.baidu.base.DriverBase;
-import com.fxy.baidu.page.BasePage;
 import com.fxy.baidu.util.GetLocator;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class LoginPage extends BasePage {
+public class LoginPage{
+    public DriverBase driverBase;
     public LoginPage(DriverBase driverBase){
-        super(driverBase);
+        this.driverBase = driverBase;
     }
     //获取登录
     public WebElement login(){
-        return element(GetLocator.GetLocator("Login"));
+        return driverBase.findElement(GetLocator.GetLocator("Login"));
     }
     //获取搜狗账号密码登录
     public WebElement SGLogin(){
-        return element(GetLocator.GetLocator("UPLogin"));
+        return driverBase.findElement(GetLocator.GetLocator("UPLogin"));
     }
     //切换frame
     public WebElement wFrame(){
-        return element(GetLocator.GetLocator("wFrame"));
+        return driverBase.findElement(GetLocator.GetLocator("wFrame"));
     }
     public WebElement nFrame(){
-        return element(GetLocator.GetLocator("nFrame"));
+        return driverBase.findElement(GetLocator.GetLocator("nFrame"));
     }
     //获取账号
     public WebElement userName(){
-        return element(GetLocator.GetLocator("userName"));
+        return driverBase.findElement(GetLocator.GetLocator("userName"));
     }
     //获取密码
     public WebElement passWord(){
-        return element(GetLocator.GetLocator("passWord"));
+        return driverBase.findElement(GetLocator.GetLocator("passWord"));
     }
     //获取登录
     public WebElement submit(){
-        return element(GetLocator.GetLocator("submit"));
+        return driverBase.findElement(GetLocator.GetLocator("submit"));
     }
 
 
@@ -48,7 +48,7 @@ public class LoginPage extends BasePage {
 
     //获取导航
     public List<WebElement> navigation(){
-        return elementList(GetLocator.GetLocator("Ergodic"));
+        return driverBase.findElements(GetLocator.GetLocator("Ergodic"));
     }
 
 
@@ -59,6 +59,6 @@ public class LoginPage extends BasePage {
     }*/
     //获取frame
     public WebElement frameUP(){
-        return element(GetLocator.GetLocator("frameUP"));
+        return driverBase.findElement(GetLocator.GetLocator("frameUP"));
     }
 }

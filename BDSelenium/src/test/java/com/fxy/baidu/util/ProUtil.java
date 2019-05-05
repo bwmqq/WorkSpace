@@ -1,6 +1,9 @@
 package com.fxy.baidu.util;
 
+import org.openqa.selenium.Cookie;
+
 import java.io.*;
+import java.util.List;
 import java.util.Properties;
 
 public class ProUtil {
@@ -35,12 +38,14 @@ public class ProUtil {
         }
     }
     //写入内容
-    public void writePro(String key,String value){
+    public void writePro(List<Cookie> cookies){
         Properties pro = new Properties();
         try {
             FileOutputStream file = new FileOutputStream(filePath);
-            pro.setProperty(key, value);
-            pro.store(file, key);
+            for (Cookie cookie : cookies) {
+                pro.setProperty(cookie.getName(), cookie.getValue());
+            }
+            pro.store(file, "Cookie");
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

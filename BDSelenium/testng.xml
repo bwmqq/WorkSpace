@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <parameter name="driverName" value="chrome"></parameter>
+    <parameter name="userName" value="2978148291"></parameter>
+    <parameter name="passWord" value="fanxiangyang456"></parameter>
+    <listeners>
+        <listener class-name="com.fxy.baidu.util.TestNGListenerScreen"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="D:/WorkSpace/BDSelenium">
+        <classes>
+            <class name="com.fxy.baidu.testCase.BDLogin">
+                <methods>
+                    <include name="login"></include>
+                    <!--<include name="ergodic"></include>-->
+                    <include name="loginOut"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+
+
+        <!--<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+        <suite name="All Test Suite" parallel="true" thread-count="2">
+            <test verbose="2" preserve-order="true" name="D:/WorkSpace/BDSelenium1">
+                <classes>
+                    <class name="com.fxy.baidu.testCase.TestLogin">
+                        <methods>
+                            <include name="login"></include>
+                        </methods>
+                    </class>
+                </classes>
+            </test>
+            <test verbose="2" preserve-order="true" name="D:/WorkSpace/BDSelenium2">
+                <classes>
+                    <class name="com.fxy.baidu.testCase.TestLogin">
+                        <methods>
+                            <include name="ziliao"></include>
+                        </methods>
+                    </class>
+                </classes>
+            </test>
+        </suite>-->

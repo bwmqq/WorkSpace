@@ -12,5 +12,6 @@ public class BDErgodicPro {
     }
     public void ergodic(){
         bdErgodic.ergodic();
+        bdErgodic.postBar();
     }
 }

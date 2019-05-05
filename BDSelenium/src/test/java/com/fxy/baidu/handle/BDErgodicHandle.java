@@ -16,7 +16,15 @@ public class BDErgodicHandle {
     public void ergodic(){
         List<WebElement> ergodic = bdErgodic.ergodic();
         for (WebElement el : ergodic) {
-            bdErgodic.click(el);
+            driverBase.click(el);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
+    }
+    public void postBar(){
+        driverBase.switchWindows("百度贴吧——全球最大的中文社区");
     }
 }

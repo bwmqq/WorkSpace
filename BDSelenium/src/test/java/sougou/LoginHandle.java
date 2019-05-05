@@ -14,25 +14,25 @@ public class LoginHandle {
         loginPage = new LoginPage(driverBase);
     }
     public void login(){
-        loginPage.click(loginPage.login());
+        driverBase.click(loginPage.login());
     }
     public void frame(){
-        loginPage.frame(loginPage.wFrame());
-        loginPage.frame(loginPage.nFrame());
+        driverBase.frame(loginPage.wFrame());
+        driverBase.frame(loginPage.nFrame());
     }
     public void UPLogin(){
-        loginPage.click(loginPage.SGLogin());
+        driverBase.click(loginPage.SGLogin());
     }
     public void userName(String userName){
-        loginPage.clear(loginPage.userName());
-        loginPage.sendKeys(loginPage.userName(), userName);
+        driverBase.clear(loginPage.userName());
+        driverBase.sendKeys(loginPage.userName(), userName);
     }
     public void passWord(String passWord){
-        loginPage.clear(loginPage.passWord());
-        loginPage.sendKeys(loginPage.passWord(), passWord);
+        driverBase.clear(loginPage.passWord());
+        driverBase.sendKeys(loginPage.passWord(), passWord);
     }
     public void submit(){
-        loginPage.click(loginPage.submit());
+        driverBase.click(loginPage.submit());
     }
 
 
@@ -47,7 +47,7 @@ public class LoginHandle {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            loginPage.click(el);
+            driverBase.click(el);
         }
     }
 

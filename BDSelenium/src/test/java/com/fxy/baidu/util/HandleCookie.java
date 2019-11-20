@@ -10,7 +10,7 @@ public class HandleCookie {
 	public ProUtil pro;
 	public HandleCookie(DriverBase driver){
 		this.driver = driver;
-		pro = new ProUtil("D:\\WorkSpace\\BDSelenium\\cookie.properties");
+		pro = new ProUtil("E:\\WorkSpace\\WorkSpace\\BDSelenium\\cookie.properties");
 	}
 	public void setCookie(String token, String domain){
 		String value = pro.getPro(token);

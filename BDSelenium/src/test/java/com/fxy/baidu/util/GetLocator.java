@@ -6,7 +6,7 @@ public class GetLocator {
     //封装By
     public static By GetLocator(String key){
         /*ProUtil proUtil = new ProUtil("D:\\WorkSpace\\BDSelenium\\homePage.properties");*/
-        ProUtil proUtil = new ProUtil("D:\\WorkSpace\\BDSelenium\\BDhomePage.properties");
+        ProUtil proUtil = new ProUtil("E:\\WorkSpace\\WorkSpace\\BDSelenium\\BDhomePage.properties");
         String locator = proUtil.getPro(key);
         String locatorType = locator.split(">")[0];
         String locatorValue = locator.split(">")[1];
